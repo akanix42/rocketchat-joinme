@@ -23,7 +23,7 @@ Package.onUse(function (api) {
 	//api.use('tap:i18n@1.5.1');
 	api.use('coffeescript');
 	api.use('rocketchat:lib@0.0.1');
-
+	api.use('frozeman:q', 'client');
 	//api.addFiles('package-tap.i18n');
 	//api.addFiles(tapi18nFiles);
 
@@ -33,12 +33,13 @@ Package.onUse(function (api) {
 	], 'server');
 
 	api.addFiles([
-		'client/hello-shim-module.js',
+		'client/module-shim.js',
 		'vendor/hello.min.js',
-		'client/hello-shim-export.js',
+		'client/hello-shim.js',
 		'vendor/hello.joinme.js',
 		'client/joinme.js'
 	], 'client');
 
 	api.export('hello');
+	api.export('when');
 });
